@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.pipeworx-io/neso",
+  "title": "Neso",
+  "description": "NESO MCP — Great Britain electricity grid open data (api.neso.energy)",
+  "version": "0.1.0",
+  "websiteUrl": "https://pipeworx.io/packs/neso",
+  "repository": {
+    "url": "https://github.com/pipeworx-io/mcp-neso",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://gateway.pipeworx.io/neso/mcp"
+    }
+  ]
+}
