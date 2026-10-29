@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-neso",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "NESO MCP — Great Britain electricity grid open data (api.neso.energy)",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-neso": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "neso"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-neso.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/neso",
   "pipeworx": {
-    "sourceHash": "v1-3ae7f56d820935955a6e785af798598f7fb68a31aba1e0ccc1153f690c3b06da",
-    "sourceCommit": "adb69d997f82a62e8e22b594488c7d04a227db35"
+    "mode": "gateway",
+    "slug": "neso",
+    "gatewaySlug": "neso",
+    "sourceHash": "v1-b764fb568c6bad09a28ce5aedb076e81508539d8b71435a4821a39a280754ba1",
+    "sourceCommit": "5c89d6abb778d45da5d92002eb251978622bedf9"
   }
 }
